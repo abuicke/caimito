@@ -1,0 +1,27 @@
+apply plugin: 'com.android.library'
+
+def version = '1.0.0'
+
+ext {
+    PUBLISH_GROUP_ID = 'ie.moses.caimito'
+    PUBLISH_ARTIFACT_ID = 'caimito'
+    PUBLISH_VERSION = version
+}
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName version
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.google.guava:guava:26.0-android'
+}
+
+apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
