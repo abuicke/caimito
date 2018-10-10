@@ -6,6 +6,7 @@ import java.util.List;
 
 public final class CollectionUtils {
 
+    @SafeVarargs
     public static <T> List<T> list(T... ts) {
         List<T> list = new ArrayList<>(ts.length);
         list.addAll(Arrays.asList(ts));
