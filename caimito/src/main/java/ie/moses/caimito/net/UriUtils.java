@@ -1,5 +1,6 @@
 package ie.moses.caimito.net;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -55,8 +56,8 @@ public final class UriUtils {
         try {
             Intent facebookIntent = getFacebookIntent(context, urlStr);
             context.startActivity(facebookIntent);
-        } catch (PackageManager.NameNotFoundException nnfe) {
-            Log.w(TAG, "failed to open facebook url in app, opening in browser...", nnfe);
+        } catch (PackageManager.NameNotFoundException | ActivityNotFoundException e) {
+            Log.w(TAG, "failed to open facebook url in app, opening in browser...", e);
             openUrl(context, urlStr);
         }
     }
