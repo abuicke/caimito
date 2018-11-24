@@ -6,6 +6,6 @@ Download
 
 ```groovy
 dependencies {
-    implementation 'ie.moses.caimito:caimito:1.5.1'
+    implementation 'ie.moses.caimito:caimito:1.6.0'
 }
 ```
