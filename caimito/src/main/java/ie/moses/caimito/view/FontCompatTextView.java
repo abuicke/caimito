@@ -7,6 +7,7 @@ import android.graphics.Typeface;
 import android.support.annotation.Nullable;
 import android.support.v4.content.res.ResourcesCompat;
 import android.util.AttributeSet;
+import android.util.Log;
 
 import ie.moses.caimito.R;
 
@@ -15,6 +16,8 @@ import ie.moses.caimito.R;
  * in XML on a normal {@link android.widget.TextView} is not reliable.
  */
 public class FontCompatTextView extends android.support.v7.widget.AppCompatTextView {
+
+    private final static String TAG = FontCompatTextView.class.getSimpleName();
 
     public FontCompatTextView(Context context) {
         this(context, null);
@@ -30,8 +33,12 @@ public class FontCompatTextView extends android.support.v7.widget.AppCompatTextV
         TypedArray a = theme.obtainStyledAttributes(attrs, R.styleable.FontCompatTextView, 0, 0);
         int fontRes = a.getResourceId(R.styleable.FontCompatTextView_font, -1);
         if (fontRes != -1) {
-            Typeface typeface = ResourcesCompat.getFont(context, fontRes);
-            setTypeface(typeface);
+            try {
+                Typeface typeface = ResourcesCompat.getFont(context, fontRes);
+                setTypeface(typeface);
+            } catch (Resources.NotFoundException e) {
+                Log.e(TAG, "call to ResourcesCompat.getFont(" + context + ", " + fontRes + ") failed");
+            }
         }
     }
 
