@@ -16,14 +16,12 @@ public final class MeasurementUtils {
     }
 
     public static float dpiToPixels(Context context, @FloatRange(from = 0.0F) float dpi) {
-        checkArgument(dpi >= 0, "dpi cannot be less than zero");
         Resources resources = context.getResources();
         DisplayMetrics displayMetrics = resources.getDisplayMetrics();
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dpi, displayMetrics);
     }
 
     public static float pixelsToDpi(Context context, @FloatRange(from = 0.0F) float pixels) {
-        Preconditions.checkArgument(pixels >= 0, "pixels cannot be less than zero");
         Resources resources = context.getResources();
         DisplayMetrics metrics = resources.getDisplayMetrics();
         return pixels / ((float) metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);
