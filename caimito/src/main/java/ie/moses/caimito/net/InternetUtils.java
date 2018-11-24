@@ -14,7 +14,7 @@ public final class InternetUtils {
     }
 
     @RequiresPermission(ACCESS_NETWORK_STATE)
-    public static boolean isInternetAvailable(Context context) {
+    public static boolean isInternetConnected(Context context) {
         checkPermission(context, ACCESS_NETWORK_STATE);
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);

@@ -3,8 +3,6 @@ package ie.moses.caimito.net;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.support.annotation.RequiresPermission;
 
 import ie.moses.caimito.Callback;
@@ -33,14 +31,8 @@ public class InternetConnectionReceiver extends SpecializedBroadcastReceiver {
     @RequiresPermission(ACCESS_NETWORK_STATE)
     public final void onReceive(Context context, Intent intent) {
         checkPermission(context, ACCESS_NETWORK_STATE);
-        ConnectivityManager connectivityManager =
-                (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-
-        if (connectivityManager != null) {
-            NetworkInfo wifi = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-            NetworkInfo mobile = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
-            _internetAvailableCallback.call(wifi.isAvailable() || mobile.isAvailable());
-        }
+        boolean isInternetConnected = InternetUtils.isInternetConnected(context);
+        _internetAvailableCallback.call(isInternetConnected);
     }
 
 }
