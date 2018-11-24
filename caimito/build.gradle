@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 
-def version = '1.5.2'
+def version = '1.6.0'
 
 ext {
     PUBLISH_GROUP_ID = 'ie.moses.caimito'
