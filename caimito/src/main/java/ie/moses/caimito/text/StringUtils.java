@@ -2,7 +2,7 @@ package ie.moses.caimito.text;
 
 public final class StringUtils {
 
-    public static String toCsv(Iterable<CharSequence> strings) {
+    public static String toCsv(Iterable<? extends CharSequence> strings) {
         StringBuilder stringBuilder = new StringBuilder();
         for (CharSequence string : strings) {
             stringBuilder.append(string)
