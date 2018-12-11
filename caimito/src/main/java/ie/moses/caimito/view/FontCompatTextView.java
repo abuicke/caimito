@@ -6,6 +6,7 @@ import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.support.annotation.Nullable;
 import android.support.v4.content.res.ResourcesCompat;
+import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.util.Log;
 
@@ -14,9 +15,11 @@ import ie.moses.caimito.R;
 /**
  * There is currently a bug where setting <code>android:fontFamily</code>
  * in XML on a normal {@link android.widget.TextView} is not reliable.
+ *
+ * @deprecated Just download the TFF files directly into your project.
  */
 @Deprecated
-public class FontCompatTextView extends android.support.v7.widget.AppCompatTextView {
+public class FontCompatTextView extends AppCompatTextView {
 
     private final static String TAG = FontCompatTextView.class.getSimpleName();
 

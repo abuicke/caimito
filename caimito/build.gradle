@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 
-def version = '1.7.1'
+def version = '1.7.0'
+def version_code = 11
 
 ext {
     PUBLISH_GROUP_ID = 'ie.moses.caimito'
@@ -15,7 +16,7 @@ android {
         minSdkVersion 16
         //noinspection OldTargetApi
         targetSdkVersion 26
-        versionCode 9
+        versionCode version_code
         versionName version
     }
 
