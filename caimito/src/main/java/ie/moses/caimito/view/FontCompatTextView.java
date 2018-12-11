@@ -15,6 +15,7 @@ import ie.moses.caimito.R;
  * There is currently a bug where setting <code>android:fontFamily</code>
  * in XML on a normal {@link android.widget.TextView} is not reliable.
  */
+@Deprecated
 public class FontCompatTextView extends android.support.v7.widget.AppCompatTextView {
 
     private final static String TAG = FontCompatTextView.class.getSimpleName();
