@@ -1,14 +1,11 @@
-package ie.moses.caimito.draw;
+package com.gravitycode.caimito.java.draw;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.support.annotation.FloatRange;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 
-import com.google.common.base.Preconditions;
-
-import static com.google.common.base.Preconditions.checkArgument;
+import androidx.annotation.FloatRange;
 
 public final class MeasurementUtils {
 

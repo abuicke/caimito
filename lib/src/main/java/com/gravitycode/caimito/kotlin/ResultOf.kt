@@ -1,4 +1,6 @@
-package com.gravitycode.solitaryfitnessapp.util
+@file:Suppress("MemberVisibilityCanBePrivate")
+
+package com.gravitycode.caimito.kotlin
 
 class ResultOf<T> private constructor(
     val subject: T,
@@ -15,4 +17,5 @@ class ResultOf<T> private constructor(
 
         fun <T> failure(t: T, exception: Throwable) = ResultOf(t, false, exception)
     }
+
 }

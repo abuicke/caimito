@@ -1,16 +1,17 @@
-package ie.moses.caimito.net;
+package com.gravitycode.caimito.java.net;
+
+import static android.Manifest.permission.ACCESS_NETWORK_STATE;
+import static com.gravitycode.caimito.java.android.PermissionUtils.checkPermission;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.support.annotation.RequiresPermission;
 
-import ie.moses.caimito.Callback;
-import ie.moses.caimito.android.SpecializedBroadcastReceiver;
+import androidx.annotation.RequiresPermission;
 
-import static android.Manifest.permission.ACCESS_NETWORK_STATE;
-import static ie.moses.caimito.android.IntentUtils.intentFilter;
-import static ie.moses.caimito.android.PermissionUtils.checkPermission;
+import com.gravitycode.caimito.java.Callback;
+import com.gravitycode.caimito.java.android.IntentUtils;
+import com.gravitycode.caimito.java.android.SpecializedBroadcastReceiver;
 
 public class InternetConnectionReceiver extends SpecializedBroadcastReceiver {
 
@@ -24,7 +25,7 @@ public class InternetConnectionReceiver extends SpecializedBroadcastReceiver {
 
     @Override
     public IntentFilter getIntentFilter() {
-        return intentFilter("android.net.conn.CONNECTIVITY_CHANGE");
+        return IntentUtils.intentFilter("android.net.conn.CONNECTIVITY_CHANGE");
     }
 
     @Override

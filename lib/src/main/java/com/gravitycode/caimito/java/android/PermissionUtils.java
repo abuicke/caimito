@@ -1,8 +1,9 @@
-package ie.moses.caimito.android;
+package com.gravitycode.caimito.java.android;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.support.v4.content.ContextCompat;
+
+import androidx.core.content.ContextCompat;
 
 public final class PermissionUtils {
 

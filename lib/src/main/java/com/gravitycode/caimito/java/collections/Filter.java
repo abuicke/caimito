@@ -1,4 +1,4 @@
-package ie.moses.caimito.collections;
+package com.gravitycode.caimito.java.collections;
 
 @FunctionalInterface
 public interface Filter<T> {

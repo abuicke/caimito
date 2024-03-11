@@ -1,4 +1,4 @@
-package ie.moses.caimito.collections;
+package com.gravitycode.caimito.java.collections;
 
 import java.util.ArrayList;
 import java.util.Arrays;

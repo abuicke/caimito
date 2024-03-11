@@ -1,4 +1,4 @@
-package ie.moses.caimito.text;
+package com.gravitycode.caimito.java.text;
 
 public final class StringUtils {
 

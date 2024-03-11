@@ -1,7 +1,7 @@
-package com.gravitycode.solitaryfitnessapp.util.error
+package com.gravitycode.caimito.kotlin
 
 import android.util.Log
-import com.gravitycode.solitaryfitnessapp.util.AppConfiguration
+
 import org.jetbrains.annotations.ApiStatus.Experimental
 
 private const val TAG = "DEBUG_ERROR"

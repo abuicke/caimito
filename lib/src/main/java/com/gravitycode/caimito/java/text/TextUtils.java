@@ -1,4 +1,4 @@
-package ie.moses.caimito.text;
+package com.gravitycode.caimito.java.text;
 
 import android.graphics.Paint;
 import android.widget.TextView;

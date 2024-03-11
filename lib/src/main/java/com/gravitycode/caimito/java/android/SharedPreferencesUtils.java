@@ -1,4 +1,4 @@
-package ie.moses.caimito.android;
+package com.gravitycode.caimito.java.android;
 
 import android.content.Context;
 import android.content.SharedPreferences;

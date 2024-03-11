@@ -1,4 +1,4 @@
-package com.gravitycode.solitaryfitnessapp.util
+package com.gravitycode.caimito.kotlin
 
 object AppConfiguration {
 
@@ -23,6 +23,8 @@ object AppConfiguration {
 
         return debug!!
     }
+
+    fun isProduction() = !isDebug()
 
     fun shouldCrashOnError(): Boolean {
         if (crashOnError == null) {

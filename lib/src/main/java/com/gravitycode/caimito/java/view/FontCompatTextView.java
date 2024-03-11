@@ -1,16 +1,17 @@
-package ie.moses.caimito.view;
+package com.gravitycode.caimito.java.view;
 
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
-import android.support.annotation.Nullable;
-import android.support.v4.content.res.ResourcesCompat;
-import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.util.Log;
 
-import ie.moses.caimito.R;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.core.content.res.ResourcesCompat;
+
+import com.gravitycode.caimito.R;
 
 /**
  * There is currently a bug where setting <code>android:fontFamily</code>

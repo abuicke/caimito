@@ -1,8 +1,9 @@
-package ie.moses.caimito.android;
+package com.gravitycode.caimito.java.android;
 
 import android.content.Context;
-import android.support.annotation.IntDef;
 import android.widget.Toast;
+
+import androidx.annotation.IntDef;
 
 public final class ToastUtils {
 

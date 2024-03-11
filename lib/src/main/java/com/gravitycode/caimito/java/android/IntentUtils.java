@@ -1,10 +1,10 @@
-package ie.moses.caimito.android;
+package com.gravitycode.caimito.java.android;
+
+import static com.google.common.base.Preconditions.checkArgument;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-
-import static com.google.common.base.Preconditions.checkArgument;
 
 public final class IntentUtils {
 

@@ -1,14 +1,15 @@
-package ie.moses.caimito.android;
+package com.gravitycode.caimito.java.android;
+
+import static com.google.common.base.Preconditions.checkNotNull;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.IntentFilter;
-import android.support.annotation.Nullable;
 import android.util.Log;
 
-import ie.moses.caimito.BuildConfig;
+import androidx.annotation.Nullable;
 
-import static com.google.common.base.Preconditions.checkNotNull;
+import com.gravitycode.caimito.kotlin.AppConfiguration;
 
 public abstract class SpecializedBroadcastReceiver extends BroadcastReceiver {
 
@@ -32,7 +33,7 @@ public abstract class SpecializedBroadcastReceiver extends BroadcastReceiver {
         if(receiver != null) {
             context.unregisterReceiver(receiver);
         }else {
-            if(BuildConfig.DEBUG) {
+            if(AppConfiguration.INSTANCE.isDebug()) {
                 throw new IllegalArgumentException("attempting to " +
                         "unregister null specialized broadcast receiver");
             }else {

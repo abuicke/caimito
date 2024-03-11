@@ -1,6 +1,6 @@
-package com.gravitycode.solitaryfitnessapp.util.net
+package com.gravitycode.caimito.kotlin.net
 
-import com.gravitycode.solitaryfitnessapp.util.android.Log
+import com.gravitycode.caimito.kotlin.android.Log
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.net.InetSocketAddress

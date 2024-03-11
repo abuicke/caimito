@@ -1,4 +1,4 @@
-package ie.moses.caimito;
+package com.gravitycode.caimito.java;
 
 @FunctionalInterface
 public interface Callback<T> {

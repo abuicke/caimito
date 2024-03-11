@@ -1,4 +1,4 @@
-package com.gravitycode.solitaryfitnessapp.util.net
+package com.gravitycode.caimito.kotlin.net
 
 enum class InternetState {
 

@@ -1,4 +1,6 @@
-package ie.moses.caimito.net;
+package com.gravitycode.caimito.java.net;
+
+import static com.google.common.base.Preconditions.checkArgument;
 
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -11,8 +13,6 @@ import android.util.Patterns;
 import android.webkit.URLUtil;
 
 import com.google.common.base.Preconditions;
-
-import static com.google.common.base.Preconditions.checkArgument;
 
 public final class UriUtils {
 

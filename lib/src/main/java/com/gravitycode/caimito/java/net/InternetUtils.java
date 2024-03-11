@@ -1,12 +1,13 @@
-package ie.moses.caimito.net;
+package com.gravitycode.caimito.java.net;
+
+import static android.Manifest.permission.ACCESS_NETWORK_STATE;
+import static com.gravitycode.caimito.java.android.PermissionUtils.checkPermission;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.support.annotation.RequiresPermission;
 
-import static android.Manifest.permission.ACCESS_NETWORK_STATE;
-import static ie.moses.caimito.android.PermissionUtils.checkPermission;
+import androidx.annotation.RequiresPermission;
 
 public final class InternetUtils {
 

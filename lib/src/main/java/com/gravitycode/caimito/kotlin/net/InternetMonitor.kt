@@ -1,11 +1,11 @@
-package com.gravitycode.solitaryfitnessapp.util.net
+package com.gravitycode.caimito.kotlin.net
 
 import android.net.ConnectivityManager
 import android.net.Network
 import android.net.NetworkCapabilities
 import android.net.NetworkRequest
 import android.os.Build
-import com.gravitycode.solitaryfitnessapp.util.android.Log
+import com.gravitycode.caimito.kotlin.android.Log
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow

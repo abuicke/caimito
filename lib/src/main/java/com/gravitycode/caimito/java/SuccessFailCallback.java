@@ -1,4 +1,4 @@
-package ie.moses.caimito;
+package com.gravitycode.caimito.java;
 
 public interface SuccessFailCallback<T> {
 
