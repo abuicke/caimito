@@ -1,4 +1,4 @@
-# caimito: A small library of helpful classes for working with Android.
+# caimito: a small java and kotlin library for working with android.
 
 To add a dependency on caimito using Maven, use the following:
 
