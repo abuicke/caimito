@@ -9,7 +9,7 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-import com.gravitycode.caimito.kotlin.AppConfiguration;
+import com.gravitycode.caimito.kotlin.core.AppConfiguration;
 
 public abstract class SpecializedBroadcastReceiver extends BroadcastReceiver {
 

@@ -1,4 +1,4 @@
-package com.gravitycode.caimito.kotlin.android
+package com.gravitycode.caimito.kotlin.ui.android
 
 import android.widget.Toast
 

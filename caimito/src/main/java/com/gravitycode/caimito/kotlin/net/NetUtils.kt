@@ -1,6 +1,6 @@
 package com.gravitycode.caimito.kotlin.net
 
-import com.gravitycode.caimito.kotlin.android.Log
+import com.gravitycode.caimito.kotlin.core.Log
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.net.InetSocketAddress

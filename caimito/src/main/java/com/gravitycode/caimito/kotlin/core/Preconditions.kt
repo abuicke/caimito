@@ -1,4 +1,4 @@
-package com.gravitycode.caimito.kotlin
+package com.gravitycode.caimito.kotlin.core
 
 import android.util.Log
 

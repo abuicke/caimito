@@ -3,9 +3,7 @@
 * */
 @file:Suppress("MemberVisibilityCanBePrivate")
 
-package com.gravitycode.caimito.kotlin.android
-
-import com.gravitycode.caimito.kotlin.AppConfiguration
+package com.gravitycode.caimito.kotlin.core
 
 /**
  * Verbose: A non-critical event has succeeded. Also covers any event which does not belong at another level,
@@ -23,7 +21,7 @@ import com.gravitycode.caimito.kotlin.AppConfiguration
  * */
 object Log {
 
-    const val META_TAG = "sf-app: "
+    const val META_TAG = "app: "
 
     /**
      * Log events which do not belong to any other log level; non-critical conditions succeeding, the state

@@ -1,6 +1,6 @@
 @file:Suppress("MemberVisibilityCanBePrivate")
 
-package com.gravitycode.caimito.kotlin
+package com.gravitycode.caimito.kotlin.core
 
 class ResultOf<T> private constructor(
     val subject: T,

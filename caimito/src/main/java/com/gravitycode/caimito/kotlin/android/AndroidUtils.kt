@@ -7,11 +7,15 @@ import android.os.StrictMode
 import android.os.StrictMode.ThreadPolicy
 import android.os.StrictMode.VmPolicy
 import android.os.strictmode.Violation
+import androidx.annotation.ChecksSdkIntAtLeast
 import androidx.annotation.RequiresApi
-import com.gravitycode.caimito.kotlin.AppConfiguration
+import com.gravitycode.caimito.kotlin.core.AppConfiguration
+import com.gravitycode.caimito.kotlin.core.Log
 import java.util.concurrent.Executor
 
 private const val TAG = "AndroidUtils"
+
+private val DISABLE_STRICT_MODE_LOCK = Any()
 
 /**
  * Only run the selected code if in debug, i.e. [AppConfiguration.isDebug] returns `true`.
@@ -25,6 +29,7 @@ fun debug(block: () -> Unit) {
 /**
  * Run the specified [block] only if the build version is at least [sdk]
  * */
+@ChecksSdkIntAtLeast(parameter = 0, lambda = 1)
 fun sdk(sdk: Int, block: () -> Unit) {
     if (Build.VERSION.SDK_INT >= sdk) {
         block()
@@ -51,15 +56,13 @@ fun disableLogcatThrottling() {
  * */
 @RequiresApi(Build.VERSION_CODES.P)
 fun enableStrictMode(context: Context, listenerExecutor: Executor) {
-
     val penaltyListener: (Violation) -> Unit = { violation ->
-        val violationOriginatesFromApp =
-            violation.stackTrace.fold(false) { acc, stackTraceElement ->
-                val containsPackageName = stackTraceElement.toString().contains(context.packageName)
-                acc || containsPackageName
-            }
+        val violationIsFromApp = violation.stackTrace.fold(false) { acc, stackTraceElement ->
+            val containsPackageName = stackTraceElement.toString().contains(context.packageName)
+            acc || containsPackageName
+        }
 
-        if (violationOriginatesFromApp) {
+        if (violationIsFromApp) {
             throw violation
         } else {
             Log.e("policy violation", android.util.Log.getStackTraceString(violation))
@@ -80,8 +83,6 @@ fun enableStrictMode(context: Context, listenerExecutor: Executor) {
             .build()
     )
 }
-
-private val DISABLE_STRICT_MODE_LOCK = Any()
 
 /**
  * All strict mode policies will be disabled while [block] executes.

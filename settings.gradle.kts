@@ -20,5 +20,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "caimito"
-include(":lib")
+include(":caimito")
  
