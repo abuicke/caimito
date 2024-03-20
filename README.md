@@ -4,7 +4,7 @@ To add a dependency on caimito using Maven, use the following:
 
 ```xml
 <dependency>
-  <groupId>com.gravitycode.caimito</groupId>
+  <groupId>dev.gravitycode.caimito</groupId>
   <artifactId>caimito</artifactId>
   <version>2.0.0</version>
 </dependency>
@@ -17,9 +17,9 @@ dependencies {
   // Pick one:
 
   // 1. Use caimito in your implementation only:
-  implementation("com.gravitycode.caimito:caimito:2.0.0")
+  implementation("dev.gravitycode.caimito:caimito:2.0.0")
 
   // 2. Use caimito types in your public API:
-  api("com.gravitycode.caimito:caimito:2.0.0")
+  api("dev.gravitycode.caimito:caimito:2.0.0")
 }
 ```

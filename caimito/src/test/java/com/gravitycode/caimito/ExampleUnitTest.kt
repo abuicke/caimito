@@ -1,4 +1,4 @@
-package com.gravitycode.caimito
+package dev.gravitycode.caimito
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

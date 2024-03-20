@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.gravitycode.caimito"
+    namespace = "dev.gravitycode.caimito"
     compileSdk = 34
 
     defaultConfig {
