@@ -12,10 +12,10 @@ afterEvaluate {
                 version = '2.0.1'
 
                 pom {
-                    signing {
-                        sign publishing.publications.release
-                        sign configurations.archives
-                    }
+//                    signing {
+//                        sign publishing.publications.release
+//                        sign configurations.archives
+//                    }
 
                     name = 'caimito'
                     description = 'A small library of helpful classes for working with Android'
@@ -52,4 +52,8 @@ afterEvaluate {
             }
         }
     }
+}
+
+signing {
+    sign publishing.publications
 }
