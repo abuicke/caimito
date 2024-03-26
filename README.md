@@ -1,8 +1,8 @@
 # caimito
 
-To add the dependency to your Android project
+To add the dependency to your Android project:
 
-1) Add the Sonatype Maven repository to your repositories:
+1) Add the Sonatype Maven repository to your repositories
 
 ```
 repositories {
@@ -10,7 +10,7 @@ repositories {
 }
 ```
 
-2) Add the library to your dependencies:
+2) Add the library to your dependencies
 
 ```
 dependencies {
