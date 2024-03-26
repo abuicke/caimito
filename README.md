@@ -1,4 +1,4 @@
-# caimito: java & kotlin for android
+# caimito
 
 To add the dependency on caimito to your Android project via Gradle:
 
