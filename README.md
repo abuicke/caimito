@@ -1,6 +1,6 @@
 # caimito
 
-To add the dependency on caimito to your Android Gradle project:
+To add the dependency on caimito to your Android project:
 
 Add the Sonatype Maven repository to your repositories:
 
