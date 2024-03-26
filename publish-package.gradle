@@ -5,27 +5,25 @@ afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                from components.release
-
                 groupId = 'dev.gravitycode.caimito'
                 artifactId = 'caimito'
                 version = '2.0.1'
 
-                pom {
-//                    signing {
-//                        sign publishing.publications.release
-//                        sign configurations.archives
-//                    }
+                // Specify the components to publish
+                from components.release
 
+                pom {
                     name = 'caimito'
                     description = 'A small library of helpful classes for working with Android'
-                    url = 'github.com/abuicke/caimito'
+                    url = 'https://github.com/abuicke/caimito'
+
                     licenses {
                         license {
                             name = 'MIT License'
                             url = 'https://opensource.org/licenses/MIT'
                         }
                     }
+
                     developers {
                         developer {
                             id = 'adambuicke'
@@ -33,27 +31,31 @@ afterEvaluate {
                             email = 'buickea@gmail.com'
                         }
                     }
+
                     scm {
-                        connection = 'scm:git:https://github.com/abuicke/caimito.git'
-                        developerConnection = 'scm:git:git@github.com:abuicke/caimito.git'
+                        connection = 'scm:git:github.com/abuicke/caimito.git'
+                        developerConnection = 'scm:git:ssh://github.com/abuicke/caimito.git'
                         url = 'https://github.com/abuicke/caimito'
                     }
                 }
             }
         }
 
+        // Repository configuration
         repositories {
             maven {
                 url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
+
                 credentials {
-                    username = "adambuicke"
-                    password = "ZU2Qf6WgGYt\"nQx"
+                    username = project.findProperty("ossrhUsername")
+                    password = project.findProperty("ossrhPassword")
                 }
             }
         }
     }
-}
 
-signing {
-    sign publishing.publications
+    // Signing configuration (if required)
+    signing {
+        sign publishing.publications.release
+    }
 }
