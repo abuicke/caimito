@@ -1,3 +1,11 @@
+/*
+ *
+ *
+ * Gradle publish fails to PUT a different random file to s01.oss.sonatype.org/service/local/staging/deploy/maven2
+ * each time. The library can eventually be published if you manage to push a version that's missing
+ * a non-critical file https://stackoverflow.com/questions/78245036/.
+ *
+ * */
 apply plugin: 'maven-publish'
 apply plugin: 'signing'
 
