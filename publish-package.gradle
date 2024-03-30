@@ -28,7 +28,7 @@ afterEvaluate {
                         developer {
                             id = 'adambuicke'
                             name = 'Adam Buicke'
-                            email = 'buickea@gmail.com'
+                            email = 'adambuicke@gravitycode.dev'
                         }
                     }
 
