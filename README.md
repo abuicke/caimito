@@ -17,9 +17,9 @@ dependencies {
   // Pick one:
 
   // 1. Use caimito in your implementation only:
-  implementation("dev.gravitycode.caimito:caimito:2.0.1")
+  implementation("dev.gravitycode.caimito:caimito:2.0.2")
 
   // 2. Use caimito types in your public API:
-  api("dev.gravitycode.caimito:caimito:2.0.1")
+  api("dev.gravitycode.caimito:caimito:2.0.2")
 }
 ```
