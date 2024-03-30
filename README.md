@@ -2,7 +2,7 @@
 
 To add the dependency to your Android project:
 
-1) Add the Sonatype Maven repository to your repositories
+1) Add the Sonatype Maven repository to your `settings.gradle.kts` file.
 
 ```
 repositories {
